@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+/**
+ * @title Migrations
+ * @dev Truffle migration tracking contract
+ */
+contract Migrations {
+    address public owner = msg.sender;
+    uint256 public last_completed_migration;
+
+    modifier restricted() {
+        require(msg.sender == owner, "Only owner");
+        _;
+    }
+
+    function setCompleted(uint256 completed) public restricted {
+        last_completed_migration = completed;
+    }
+}

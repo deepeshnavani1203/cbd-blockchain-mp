@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+.env
+
+# Build
+build/
+src/abis/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Truffle
+.secret
