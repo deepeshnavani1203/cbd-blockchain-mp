@@ -5,7 +5,7 @@
 const Web3 = require("web3");
 
 const TARGET = process.argv[2] || "0xc67543b9ef0830e937a6474d303831e101dfd851";
-const GANACHE_URL = "http://127.0.0.1:7545";
+const GANACHE_URL = "http://127.0.0.1:7500";
 
 // Minimal ERC-20 ABI for transfer + balanceOf
 const ERC20_ABI = [

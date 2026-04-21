@@ -63,7 +63,7 @@ function App() {
 
   // ── Switch MetaMask to Ganache ───────────────────────────────
   const switchToGanache = async () => {
-    const GANACHE_CHAIN_ID = "0x539"; // 1337 in hex
+    const GANACHE_CHAIN_ID = "0x1691"; // 5777 in hex (matches user Ganache)
     try {
       await window.ethereum.request({
         method: "wallet_switchEthereumChain",
@@ -77,7 +77,7 @@ function App() {
           params: [{
             chainId: GANACHE_CHAIN_ID,
             chainName: "Ganache Local",
-            rpcUrls: ["http://127.0.0.1:7545"],
+            rpcUrls: ["http://127.0.0.1:7500"],
             nativeCurrency: { name: "ETH", symbol: "ETH", decimals: 18 },
           }],
         });
@@ -113,6 +113,7 @@ function App() {
       });
       const acct = accounts[0];
       const netId = await w3.eth.net.getId();
+      console.log("Connected to Network ID:", netId);
 
       // Load contract instances — try exact network ID first,
       // then fall back to the last deployed network (handles Ganache ID mismatches)

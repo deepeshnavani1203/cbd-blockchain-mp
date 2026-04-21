@@ -8,7 +8,7 @@ function Navbar({ account, ethBalance, networkId, onConnect, loading }) {
     addr ? `${addr.slice(0, 6)}…${addr.slice(-4)}` : "";
 
   const isLocalNetwork =
-    networkId === 1337 || networkId === 5777 || networkId === 5777n;
+    Number(networkId) === 1337 || Number(networkId) === 5777;
 
   return (
     <nav className="navbar-bank">
