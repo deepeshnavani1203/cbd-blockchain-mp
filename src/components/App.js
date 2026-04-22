@@ -77,7 +77,7 @@ function App() {
           params: [{
             chainId: GANACHE_CHAIN_ID,
             chainName: "Ganache Local",
-            rpcUrls: ["http://127.0.0.1:7500"],
+            rpcUrls: ["http://127.0.0.1:7545"],
             nativeCurrency: { name: "ETH", symbol: "ETH", decimals: 18 },
           }],
         });

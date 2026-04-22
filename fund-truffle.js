@@ -3,7 +3,7 @@ const BankToken = artifacts.require("BankToken");
 
 module.exports = async function (callback) {
   try {
-    const target = "0xc67543b9ef0830e937a6474d303831e101dfd851";
+    const target = "0xaf4f074c9dD369cc3dBb63E057Ef9EFAb21D4dD7";
     const accounts = await web3.eth.getAccounts();
     const token = await BankToken.deployed();
 
